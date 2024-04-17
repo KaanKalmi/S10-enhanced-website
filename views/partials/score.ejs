@@ -1,0 +1,19 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="score.css">
+        <h2> Assign a score to each SDG </h2>
+<section class="score-container">
+    <% sdg.forEach(sdg=> { %>
+        <article>
+            <h3> <%= sdg.title %> </h3>
+            <picture> 
+                <img src="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>" alt="<%= sdg.title %>" class="sdg">
+            </picture>
+            <form method="post" action="/">
+                <label>
+                    <input type="range" name="score" min="-5" max="5" class="slider" tabindex="0">
+                </label>
+                <% }); %>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </article>
+</section>

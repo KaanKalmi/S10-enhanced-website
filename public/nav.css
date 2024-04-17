@@ -1,0 +1,5 @@
+header{ display: flex; height: 45px; text-align: left; margin-left: 3em; }
+nav { border-bottom: 1px dotted var(--primary-color); height: 55px; 
+    & ul { list-style: none; display: flex; justify-content: right; align-items: center; margin-right: 2em; 
+        & li { padding: .8em; margin-inline: .75em; 
+            & a { text-decoration: none; } } } }
