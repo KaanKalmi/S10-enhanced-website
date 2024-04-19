@@ -1,7 +1,7 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Progressively Enhanced Website voor Bedrijfsduurzaamheid
 
 ## Inhoudsopgave
 
@@ -12,19 +12,33 @@
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
-
-## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+# beschrijving
+Deze repository bevat de code voor een Progressive Enhancement website gericht op bedrijven die geïnteresseerd zijn in duurzaamheid. De website stelt bedrijven in staat belanghebbenden toe te voegen en hun scores voor de Sustainable Development Goals (SDG's) te beoordelen om hun handafdruk en voetafdruk te evalueren.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+- **HTML:** Semantische markup voor inhoudsstructuur en toegankelijkheid.
+- **CSS:** Styling en lay-out om de gebruikersinterface en -ervaring te verbeteren.
+- **JavaScript:** Progressive enhancement en interactiviteit, waardoor kernfunctionaliteit beschikbaar is op alle apparaten.
+- **Responsive Design:** Media queries en vloeibare lay-outs voor optimale weergave op verschillende schermformaten.
+- **Progressive Enhancement:** De website is gebouwd met behulp van progressieve enhancement-principes, wat zorgt voor een robuuste en toegankelijke ervaring op alle apparaten en browsers, ongeacht hun mogelijkheden.
+- **Accessibility:** Gebruik van semantisch HTML om ervoor te zorgen dat de website toegankelijk is voor alle gebruikers.
+- **Performance:** Minificatie, lazy loading en caching-technieken om de prestaties en snelheid van de website te verbeteren.
+- **EJS (Embedded JavaScript):** Voor het genereren van dynamische HTML-pagina's op de serverzijde.
+- **Node.js:** Een JavaScript-runtime voor het uitvoeren van server-side code en het bouwen van webapplicaties.
+- **Directus API:** Een headless CMS (Content Management System) voor het beheren van inhoud en gegevens, waardoor flexibiliteit en schaalbaarheid worden geboden.
 
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+Volg deze stappen om de website lokaal uit te voeren:
+
+1. Clone deze repository naar je lokale machine:
+   ```bash
+   git clone https://github.com/jouw-gebruikersnaam/sustainability-website.git
+   ```
+2. Navigeer naar de projectmap:
+   ```bash
+   cd sustainability-website
+   ```
+3. Open het bestand `index.ejs` in je favoriete webbrowser.
 
 ## Bronnen
 
