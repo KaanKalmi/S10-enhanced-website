@@ -12,8 +12,12 @@ Progressively Enhanced Website voor Bedrijfsduurzaamheid
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-# beschrijving
+## beschrijving
 Deze repository bevat de code voor een Progressive Enhancement website gericht op bedrijven die geïnteresseerd zijn in duurzaamheid. De website stelt bedrijven in staat belanghebbenden toe te voegen en hun scores voor de Sustainable Development Goals (SDG's) te beoordelen om hun handafdruk en voetafdruk te evalueren.
+
+## Gebruik
+Hier kan ik nog niks zetten 
+> site is niet af
 
 ## Kenmerken
 - **HTML:** Semantische markup voor inhoudsstructuur en toegankelijkheid.
@@ -32,15 +36,16 @@ Volg deze stappen om de website lokaal uit te voeren:
 
 1. Clone deze repository naar je lokale machine:
    ```bash
-   git clone https://github.com/jouw-gebruikersnaam/sustainability-website.git
+   git clone https://github.com/gebruikersnaam/S10-enhanced-website.git
    ```
 2. Navigeer naar de projectmap:
    ```bash
-   cd sustainability-website
+   cd S10-enhanced-website
    ```
 3. Open het bestand `index.ejs` in je favoriete webbrowser.
 
 ## Bronnen
+Nog geen bronnen gebruikt.
 
 ## Licentie
 
