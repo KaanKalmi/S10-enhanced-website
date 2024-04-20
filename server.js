@@ -48,22 +48,31 @@ app.listen(app.get('port'), function() {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-// VOORBEELD POST VAN VORIGE SPRINT
-// app.post('/', (req, res) => { //post route naar / met response request
-//     console.log(req.body); // log request body in console
-//     const sdgId = req.body.sdg; // haal sdg uit request body
-//     if (sdgId) {
-//         res.redirect(`/score?sdgIds=${sdgId}`); // redirect naar scoreboard net de sdgId
-//     } else {
-//         res.redirect('/?error=true'); // redirect naar home met error
-//     }
-// })
+app.post('/sdg', (req, res) => { //post route naar / met response request
+    console.log(req.body); // log request body in console
+    const sdgId = req.body.sdg; // haal sdg uit request body
+    if (sdgId) {
+        res.redirect(`/score?sdgIds=${sdgId}`); // redirect naar scoreboard net de sdgId
+    } else {
+        res.redirect('/?error=true'); // redirect naar home met error
+    }
+})
 
-// app.get('/score', function(request, response) {
-//     const filteredsdgs = sdgData.data.filter(sdg => request.query.sdgIds.includes(sdg.number)) // filter sdgs op basis van query van app.post
-//     response.render('score', {
-//         sdg:filteredsdgs, // filter sdgs op basis van query
-//         stakeholder: stakeholdersData.data, 
-//         score: scoresData.data, 
-//     })
-// })
+app.get('/sdg', function(request, response) {
+    response.render('sdg', {
+        sdgs: sdgData.data,
+        stakeholder: stakeholdersData.data,
+        score: scoresData.data,
+        company: companiesData.data
+    })
+})
+
+
+app.get('/score', function(request, response) {
+    const filteredsdgs = sdgData.data.filter(sdg => request.query.sdgIds.includes(sdg.number)) // filter sdgs op basis van query van app.post
+    response.render('score', {
+        sdg:filteredsdgs, // filter sdgs op basis van query
+        stakeholder: stakeholdersData.data, 
+        score: scoresData.data, 
+    })
+})
