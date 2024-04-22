@@ -7,7 +7,7 @@
     --primary-color: #6E9075;
     --secondary-color: #5CF64A;
 }
-
+@media (prefers-color-scheme: dark) {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -34,3 +34,32 @@ h2, h3 {
     text-align: center;
     color: var(--secondary-color);
 }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--text-color);
+        color: var(--bg-color);
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        margin: 0;
+        padding-block: 1em;
+        color: var(--primary-color);
+    }
+    
+    h2, h3 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+        color: var(--primary-color);
+    }
+  }
