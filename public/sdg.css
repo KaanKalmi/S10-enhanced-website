@@ -1,27 +1,41 @@
-#count{
+.flex-container {
+    display: flex;
+}
+
+#count {
     text-align: center;
 }
 
-.sdg-container{
+.sdg-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 3em;
-    margin: 2em;
+    width: 80dvw;
+
+    & form {
+        display: flex;
+        width: 80dvw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
 }
 
 .score-container {
     padding: 2em;
     margin: 1em;
+
     & article {
         display: flex;
         flex-direction: column;
+
         & picture {
             display: flex;
             justify-content: center;
-            & img { border-radius: 5px; }
+
+            & img {
+                border-radius: 5px;
+            }
+
             & form {
                 display: flex;
                 flex-direction: column;
@@ -30,31 +44,34 @@
     }
 }
 
-.checkbox{
+.checkbox {
     opacity: 0;
 }
 
-.checkbox:focus + .sdg{
+.checkbox:focus+.sdg {
     border: 2px solid var(--primary-color);
 }
-.sdg{
+
+.sdg {
     height: 175px;
     width: 175px;
     filter: saturate(25%);
     margin: .2em .2em;
 }
 
-input:checked + .sdg, .sdg:hover{
+input:checked+.sdg,
+.sdg:hover {
     filter: saturate(100%);
 }
 
-.btn{
+.btn {
     display: block;
-    margin: auto;
+    margin-inline: 2em;
+    margin-block: 5em;
     padding: 1em;
     width: 200px;
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--bg-color);
     font-weight: bold;
     border-radius: 12px;
