@@ -24,9 +24,9 @@ app.use(express.urlencoded({extended: true}))
 const apiUrl = 'https://fdnd-agency.directus.app/items'
 
 const sdgData = await fetchJson(apiUrl + '/hf_sdgs')
-const stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders/1')
+const stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders/2')
 const scoresData = await fetchJson(apiUrl + '/hf_scores')
-const companiesData = await fetchJson(apiUrl + '/hf_companies/1')
+const companiesData = await fetchJson(apiUrl + '/hf_companies/3')
 
 console.log(companiesData.data.name)
 
@@ -48,16 +48,6 @@ app.listen(app.get('port'), function() {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-app.post('/sdg', (req, res) => { //post route naar / met response request
-    console.log(req.body); // log request body in console
-    const sdgId = req.body.sdg; // haal sdg uit request body
-    if (sdgId) {
-        res.redirect(`/score?sdgIds=${sdgId}`); // redirect naar scoreboard net de sdgId
-    } else {
-        res.redirect('/?error=true'); // redirect naar home met error
-    }
-})
-
 app.get('/sdg', function(request, response) {
     response.render('sdg', {
         sdgs: sdgData.data,
@@ -67,6 +57,15 @@ app.get('/sdg', function(request, response) {
     })
 })
 
+app.post('/sdg', (req, res) => { //post route naar /sdg met response request
+    console.log(req.body); // log request body in console
+    const sdgId = req.body.sdg; // haal sdg uit request body
+    if (sdgId) {
+        res.redirect(`/score?sdgIds=${sdgId}`); // redirect naar score net de sdgId
+    } else {
+        res.redirect('/?error=true'); // redirect naar home met error
+    }
+})
 
 app.get('/score', function(request, response) {
     const filteredsdgs = sdgData.data.filter(sdg => request.query.sdgIds.includes(sdg.number)) // filter sdgs op basis van query van app.post

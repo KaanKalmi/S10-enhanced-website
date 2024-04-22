@@ -6,6 +6,7 @@ header{
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-color);
     & h1{
         padding-top: 1em;
         padding-bottom: 1.5em;
@@ -134,7 +135,6 @@ input:checked+.slider:before {
     
     li a:hover {
         background-color: var(--primary-color);
-        color: var(--text-color);
     }
     
     .bottom-aligned{

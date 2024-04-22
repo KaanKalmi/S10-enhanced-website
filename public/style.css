@@ -2,10 +2,10 @@
 @import url('nav.css');
 
 :root {
-    --bg-color: #272727;
-    --text-color: #F9F7F7;
-    --primary-color: #6E9075;
-    --secondary-color: #5CF64A;
+    --bg-color: #312F2F;
+    --text-color: #EFEFEF;
+    --primary-color: #A6D9F7;
+    --secondary-color: #84DCCF;
 }
 @media (prefers-color-scheme: dark) {
 body {

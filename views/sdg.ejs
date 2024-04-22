@@ -5,7 +5,7 @@
 <script defer src="script.js"></script>
 <link rel="stylesheet" href="sdg.css">
 <section class="sdg-container">
-	<form method="POST" action="score.ejs">
+	<form method="POST" action="score">
 		<% sdgs.forEach(function(sdg) { %>
 			<label>
 				<input type="checkbox" class="checkbox" tabindex="0" name="sdg" value="<%= sdg.number%>">
