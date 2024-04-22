@@ -2,10 +2,10 @@
 @import url('nav.css');
 
 :root {
-    --bg-color: #1d1d1d;
-    --text-color: #CECECE;
-    --primary-color: #7adaa7;
-    --secondary-color: #a0e5cd;
+    --bg-color: #272727;
+    --text-color: #F9F7F7;
+    --primary-color: #6E9075;
+    --secondary-color: #5CF64A;
 }
 
 body {
@@ -22,7 +22,9 @@ h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: normal;
-    color: var(--primary-color);
+    margin: 0;
+    padding-block: 1em;
+    color: var(--secondary-color);
 }
 
 h2, h3 {
@@ -30,7 +32,5 @@ h2, h3 {
     font-weight: 700;
     font-style: normal;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
-
-a { color: var(--primary-color); }

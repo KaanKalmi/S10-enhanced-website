@@ -1,5 +1,97 @@
-header{ display: flex; height: 45px; text-align: left; margin-left: 3em; }
-nav { border-bottom: 1px dotted var(--primary-color); height: 55px; 
-    & ul { list-style: none; display: flex; justify-content: right; align-items: center; margin-right: 2em; 
-        & li { padding: .8em; margin-inline: .75em; 
-            & a { text-decoration: none; } } } }
+header{
+    border-right: 2px solid var(--secondary-color);
+    width: 200px;
+    height: 100dvh;
+    margin: 0;
+    & h1{
+        padding-block: 1em;
+        text-align: center;
+    }
+}
+nav{
+    display: flex;
+    flex-direction: column;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 3em;
+    width: 200px;
+}
+
+li a {
+    display: block;
+    color: var(--text-color);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+.bottom-aligned{
+    margin-top: 16em; /* TIJDELIJKE WORK AROUND */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    margin-block: 1em;
+    margin-inline: auto;
+    width: 4em;
+    height: 2em;
+    border: 2px solid var(--text-color);
+    border-radius: 1.8em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: grab;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height:1.8rem;
+    width: 2rem;
+    left: .1rem;
+    bottom: .1rem;
+    background-color: var(--text-color);
+    transition: .4s;
+}
+
+.slider:after {
+    background-color: var(--bg-color);
+}
+input:checked+.slider {
+    background-color: var(--bg-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.75rem);
+}
+
+.slider.round {
+    border-radius: 1.8em;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
