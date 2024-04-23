@@ -3,7 +3,9 @@
     <link rel="stylesheet" href="overview.css">
 <article class="stakeholder Clients">
 Clients come here
-<!-- Importeer Test uit directus hierin! -->
+<% stakeholder.forEach(function(item) { %>
+    <h4> <%= item.name %> </h4>
+<% }) %>
 </article>
 <article class="stakeholder Staff">
 Staff come here
