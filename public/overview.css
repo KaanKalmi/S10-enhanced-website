@@ -3,16 +3,16 @@
 }
 .overview-grid{
     display: grid;
-    width: 80dvw;
-    margin-inline: auto;
-    margin-block: 36px;
+    width: 85dvw;
+    margin: 36px;
     grid-template-areas: "Clients Staff Suppliers Environment" "overview overview overview update" "overview overview overview update";
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 36px;
+    grid-gap: 24px;
     padding: 16px;
 }
 
+@media (prefers-color-scheme: dark) {
 .stakeholder{
     border: 2px solid var(--secondary-color);
     border-radius: 16px;
@@ -22,10 +22,9 @@
 
 .overview{
     grid-area: overview;
-    border: 2px solid var(--secondary-color);
     border-radius: 16px;
     padding: 32px;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color-2);
 }
 
 .update{
@@ -35,3 +34,28 @@
     padding: 32px;
     background-color: var(--secondary-color);
 }
+}
+
+@media (prefers-color-scheme: light) {
+    .stakeholder{
+        border: 2px solid var(--primary-color);
+        border-radius: 16px;
+        padding: 32px;
+        background-color: var(--primary-color) ;
+    }
+    
+    .overview{
+        grid-area: overview;
+        border-radius: 16px;
+        padding: 32px;
+        background-color: var(--accent-color);
+    }
+    
+    .update{
+        grid-area: update;
+        border: 2px solid var(--primary-color);
+        border-radius: 16px;
+        padding: 32px;
+        background-color: var(--primary-color);
+    }
+    }

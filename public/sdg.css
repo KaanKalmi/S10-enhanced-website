@@ -8,11 +8,11 @@
 
 .sdg-container {
     display: flex;
-    width: 80dvw;
+    width: 85dvw;
 
     & form {
         display: flex;
-        width: 80dvw;
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;

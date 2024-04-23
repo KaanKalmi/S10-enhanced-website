@@ -6,7 +6,9 @@
     --bg-color: #090f15;
     --primary-color: #87b8e0;
     --secondary-color: #12578f;
-    --accent-color: #30a0fb;
+    --accent-color: #30a0fb1e;
+    --accent-color-2: #103d6327;
+    --green: #336833;
 }
 @media (prefers-color-scheme: dark) {
 body {

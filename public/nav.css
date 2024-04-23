@@ -1,31 +1,34 @@
 @media (prefers-color-scheme: dark) {
 header{
-    border-right: 2px solid var(--secondary-color);
-    width: 200px;
+    width: 15dvw;
     height: 100dvh;
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color);
+    background-color: var(--accent-color-2);
     & h1{
         padding-top: 1em;
         padding-bottom: 1.5em;
         text-align: center;
         & span{
-            color: var(--text-color);
+            color: var(--green);
         }
     }
 }
 nav{
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding: 0;
     line-height: 3em;
-    width: 200px;
+    width: 100%;
+    height: 100%;
 }
 
 li a {
@@ -41,7 +44,7 @@ li a:hover {
 }
 
 .bottom-aligned{
-    margin-top: 17em; /* TIJDELIJKE WORK AROUND */
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -85,11 +88,8 @@ li a:hover {
     transition: .4s;
 }
 
-.slider:after {
-    background-color: var(--bg-color);
-}
 input:checked+.slider {
-    background-color: var(--bg-color);
+    background-color: var(--accent-color);
 }
 
 input:checked+.slider:before {
@@ -107,29 +107,35 @@ input:checked+.slider:before {
 
 @media (prefers-color-scheme: light) {
     header{
-        border-right: 2px solid var(--primary-color);
-        width: 200px;
+        width: 15dvw;
         height: 100dvh;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--accent-color);
         & h1{
             padding-top: 1em;
             padding-bottom: 1.5em;
             text-align: center;
             & span{
-                color: var(--bg-color);
+                color: var(--green);
             }
         }
     }
     nav{
+        height: 100%;
         display: flex;
         flex-direction: column;
     }
     ul {
+        display: flex;
+        flex-direction: column;
         list-style-type: none;
         margin: 0;
         padding: 0;
         line-height: 3em;
-        width: 200px;
+        width: 100%;
+        height: 100%;
     }
     
     li a {
@@ -141,10 +147,11 @@ input:checked+.slider:before {
     
     li a:hover {
         background-color: var(--primary-color);
+        color: var(--bg-color);
     }
     
     .bottom-aligned{
-        margin-top: 17em; /* TIJDELIJKE WORK AROUND */
+        margin-top: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -187,12 +194,9 @@ input:checked+.slider:before {
         background-color: var(--bg-color);
         transition: .4s;
     }
-    
-    .slider:after {
-        background-color: var(--text-color);
-    }
+
     input:checked+.slider {
-        background-color: var(--text-color);
+        background-color: var(--accent-color);
     }
     
     input:checked+.slider:before {
@@ -206,4 +210,4 @@ input:checked+.slider:before {
     .slider.round:before {
         border-radius: 50%;
     }
-}
+    }

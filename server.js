@@ -26,18 +26,19 @@ const apiUrl = 'https://fdnd-agency.directus.app/items'
 const sdgData = await fetchJson(apiUrl + '/hf_sdgs')
 const stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders/2')
 const scoresData = await fetchJson(apiUrl + '/hf_scores')
-const companiesData = await fetchJson(apiUrl + '/hf_companies/3')
+const companiesData = await fetchJson(apiUrl + '/hf_companies/2')
 
 console.log(companiesData.data.name)
 
 app.get('/', function(request, response) {
-        response.render('index', {
-            sdgs: sdgData.data,
-            stakeholder: stakeholdersData.data,
-            score: scoresData.data,
-            company: companiesData.data
-        })
-})
+
+    response.render('index', {
+        sdgs: sdgData.data,
+        stakeholder: stakeholdersData.data,
+        score: scoresData.data,
+        company: companiesData.data
+    });
+});
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8009)
