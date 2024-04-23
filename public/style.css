@@ -2,10 +2,11 @@
 @import url('nav.css');
 
 :root {
-    --bg-color: #312F2F;
-    --text-color: #EFEFEF;
-    --primary-color: #A6D9F7;
-    --secondary-color: #84DCCF;
+    --text-color: #eef1f4;
+    --bg-color: #090f15;
+    --primary-color: #87b8e0;
+    --secondary-color: #12578f;
+    --accent-color: #30a0fb;
 }
 @media (prefers-color-scheme: dark) {
 body {
@@ -24,16 +25,15 @@ h1 {
     font-style: normal;
     margin: 0;
     padding-block: 1em;
-    color: var(--secondary-color);
 }
 
-h2, h3 {
+h2, h3, h4 {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
     text-align: center;
-    color: var(--secondary-color);
 }
+
 }
 @media (prefers-color-scheme: light) {
     body {
@@ -52,14 +52,12 @@ h2, h3 {
         font-style: normal;
         margin: 0;
         padding-block: 1em;
-        color: var(--primary-color);
     }
     
-    h2, h3 {
+    h2, h3, h4 {
         font-family: "Roboto", sans-serif;
         font-weight: 700;
         font-style: normal;
         text-align: center;
-        color: var(--primary-color);
     }
   }
