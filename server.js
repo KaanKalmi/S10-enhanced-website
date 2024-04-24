@@ -24,7 +24,7 @@ app.use(express.urlencoded({extended: true}))
 const apiUrl = 'https://fdnd-agency.directus.app/items'
 
 const sdgData = await fetchJson(apiUrl + '/hf_sdgs')
-const stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders')
+const stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders?filter={"company_id":2}')
 const scoresData = await fetchJson(apiUrl + '/hf_scores')
 const companiesData = await fetchJson(apiUrl + '/hf_companies/2')
 
