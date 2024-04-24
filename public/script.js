@@ -5,12 +5,10 @@ var selectedCheckboxesElement = document.getElementById('selectedCheckboxes');
 function countCheckedCheckboxes() {
     return Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
 }
-
 function updateCount() {
     var count = countCheckedCheckboxes();
     countElement.textContent = count + ' checkboxes selected';
 }
-
 Array.from(checkboxes).forEach(checkbox => {
     checkbox.addEventListener('change', function() {
         if (countCheckedCheckboxes() > 5) {
@@ -20,5 +18,4 @@ Array.from(checkboxes).forEach(checkbox => {
         updateCount();
     });
 });
-
 updateCount();
