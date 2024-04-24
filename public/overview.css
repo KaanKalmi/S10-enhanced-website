@@ -5,14 +5,21 @@
     display: grid;
     width: 85dvw;
     margin: 36px;
-    grid-template-areas: "Clients Staff Suppliers Environment" "overview overview overview update" "overview overview overview update";
+    grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: .2fr 1fr 1.5fr;
     grid-gap: 24px;
     padding: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
+.page-title{
+    grid-area: title;
+    letter-spacing: .1em;
+    font-size: 2em;
+    margin-block: .2em;
+}
+
 .stakeholder{
     border: 2px solid var(--secondary-color);
     border-radius: 16px;
@@ -37,6 +44,13 @@
 }
 
 @media (prefers-color-scheme: light) {
+    .page-title{
+        grid-area: title;
+        letter-spacing: .1em;
+        font-size: 2em;
+        margin-block: .2em;
+    }
+    
     .stakeholder{
         border: 2px solid var(--primary-color);
         border-radius: 16px;

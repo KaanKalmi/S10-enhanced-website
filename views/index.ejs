@@ -1,6 +1,7 @@
-<%- include('partials/head')%>
+<%- include('partials/head', {current:'/'});%>
 <main class="overview-grid">
     <link rel="stylesheet" href="overview.css">
+    <h2 class="page-title">Overview</h2>
 <article class="stakeholder Clients">
 Clients come here
 <% stakeholder.forEach(function(item) { %>
