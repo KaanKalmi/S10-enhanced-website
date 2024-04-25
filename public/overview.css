@@ -2,35 +2,35 @@
     display: flex;
 }
 .overview-grid{
-    display: grid;
-    width: 85dvw;
-    margin: 36px;
-    grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: .2fr 1fr 1.5fr;
     grid-gap: 24px;
+    display: grid;
+    grid-template-rows: .2fr 1fr 1.5fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
+    margin: 36px;
     padding: 16px;
+    width: 85dvw;
 }
 
 .page-title{
     grid-area: title;
-    letter-spacing: .1em;
-    font-size: 2em;
     margin-block: .2em;
+    font-size: 2em;
+    letter-spacing: .1em;
 }
 
 .stakeholder{
     border: 2px solid var(--sec);
     border-radius: 16px;
-    padding: 32px;
     background-color: var(--sec) ;
+    padding: 32px;
 }
 
 .overview{
     grid-area: overview;
     border-radius: 16px;
-    padding: 32px;
     background-color: var(--prim);
+    padding: 32px;
     color: var(--bg);
 }
 
@@ -38,6 +38,6 @@
     grid-area: update;
     border: 2px solid var(--sec);
     border-radius: 16px;
-    padding: 32px;
     background-color: var(--sec);
+    padding: 32px;
 }

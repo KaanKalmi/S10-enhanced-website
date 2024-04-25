@@ -12,17 +12,17 @@
 
     & form {
         display: flex;
-        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         margin: auto;
+        width: 100%;
     }
 }
 
 .score-container {
-    padding: 2em;
     margin: 1em;
+    padding: 2em;
 
     & article {
         display: flex;
@@ -53,10 +53,10 @@
 }
 
 .sdg {
-    height: 175px;
-    width: 175px;
     filter: saturate(25%);
     margin: .2em .2em;
+    width: 175px;
+    height: 175px;
 }
 
 input:checked+.sdg,
@@ -66,15 +66,15 @@ input:checked+.sdg,
 
 .btn {
     display: block;
+    cursor: pointer;
     margin-inline: 2em;
     margin-block: 5em;
+    border-radius: 12px;
+    background-color: var(--sec);
     padding: 1em;
     width: 200px;
-    text-align: center;
-    background-color: var(--sec);
     color: var(--bg);
     font-weight: bold;
-    border-radius: 12px;
-    cursor: pointer;
+    text-align: center;
     text-decoration: none;
 }
