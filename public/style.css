@@ -1,19 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 @import url('nav.css');
 
-:root {
-    --text-color: #eef1f4;
-    --bg-color: #090f15;
-    --primary-color: #87b8e0;
-    --secondary-color: #12578f;
-    --accent-color: #30a0fb1e;
-    --accent-color-2: #103d6327;
-    --green: #336833;
+:root,
+[data-selected-theme="dark"] {
+    --bg: #090f15;
+    --text: #eef1f4;
+    --prim: #87b8e0;
+    --sec: #12578f;
 }
-@media (prefers-color-scheme: dark) {
+
+[data-selected-theme="light"] {
+    --bg: #eef1f4;
+    --text: #090f15;
+    --prim: #12578f;
+    --sec: #87b8e0;
+}
+
+[data-selected-theme="green"] {
+    --bg: #090E0C;
+    --text: #eef0ef;
+    --prim: #95d3b7;
+    --sec: #1f7a51;
+    --accent: #3fe69a;
+}
+
+[data-selected-theme="cosmic"] {
+    --bg: #160718;
+    --text: #f2e5f4;
+    --prim: #de92eb;
+    --sec: #790e8b;
+    --accent: #d813f9;
+}
+
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg);
+    color: var(--text);
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
@@ -29,37 +50,11 @@ h1 {
     padding-block: 1em;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
     text-align: center;
 }
-
-}
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--text-color);
-        color: var(--bg-color);
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-    
-    h1 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-        margin: 0;
-        padding-block: 1em;
-    }
-    
-    h2, h3, h4 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-    }
-  }

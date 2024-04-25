@@ -49,7 +49,7 @@
 }
 
 .checkbox:focus+.sdg {
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--prim);
 }
 
 .sdg {
@@ -71,8 +71,8 @@ input:checked+.sdg,
     padding: 1em;
     width: 200px;
     text-align: center;
-    background-color: var(--secondary-color);
-    color: var(--bg-color);
+    background-color: var(--sec);
+    color: var(--bg);
     font-weight: bold;
     border-radius: 12px;
     cursor: pointer;

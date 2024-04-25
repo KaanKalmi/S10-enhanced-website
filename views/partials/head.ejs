@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-selected-theme="dark"> 
+<!-- data-selected-theme is een HTML attribute die de custom data zet van de site en lokaal opslaat -->
 
 <head>
     <meta charset="UTF-8">
@@ -10,25 +11,27 @@
 
 <body>
     <div class="flex-container">
-    <header>
-        <h1><span>Cross</span>marX</h1>
-        <nav>
-            <ul>
-                <li><a href="/" <% if ( current == '/') { %> class="active" <% }%>> Overview</a></li>
-                <li><a href="/sdg" <% if ( current == '/sdg') { %> class="active" <% }%>>Clients</a></li>
-                <li><a href="#">Staff</a></li>
-                <li><a href="#">Suppliers</a></li>
-                <li><a href="#">Environment</a></li>
+        <header>
+            <h1><span>Cross</span>marX</h1>
+            <nav>
+                <ul>
+                    <li><a href="/" <% if ( current=='/' ) { %> class="active" <% }%>> Overview</a></li>
+                    <li><a href="/sdg" <% if ( current=='/sdg' ) { %> class="active" <% }%>>Clients</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="#">Suppliers</a></li>
+                    <li><a href="#">Environment</a></li>
 
-                <div class="bottom-aligned">
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
-                    <label class="switch">
+                    <div class="bottom-aligned">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Logout</a></li>
                         <script defer src="switch.js"></script>
-                        <input type="checkbox"  class="lightswitch">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </ul>
-        </nav>
-    </header>
+                        <div class="theme-switcher">
+                        <button data-theme="dark" aria-pressed="true">Dark</button>
+                        <button data-theme="light" aria-pressed="false">Light</button>
+                        <button data-theme="green" aria-pressed="false">Green</button>
+                        <button data-theme="cosmic" aria-pressed="false">Cosmic</button>
+                    </div>
+                    </div>
+                </ul>
+            </nav>
+        </header>

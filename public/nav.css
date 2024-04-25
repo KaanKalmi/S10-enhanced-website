@@ -1,231 +1,58 @@
-@media (prefers-color-scheme: dark) {
-    header {
-        width: 15dvw;
-        height: 100dvh;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--accent-color-2);
+header {
+    width: 15dvw;
+    height: 100dvh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sec);
 
-        & h1 {
-            padding-top: 1em;
-            padding-bottom: 1.5em;
-            text-align: center;
+    & h1 {
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        text-align: center;
 
-            & span {
-                color: var(--green);
-            }
+        & span {
+            color: greenyellow;
         }
-    }
-
-    nav {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        line-height: 3em;
-        width: 100%;
-        height: 100%;
-    }
-
-    li a {
-        display: block;
-        color: var(--text-color);
-        padding: 0 24px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: var(--secondary-color);
-        color: var(--bg-color);
-    }
-
-    .bottom-aligned {
-        margin-top: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-
-    .switch {
-        position: relative;
-        display: inline-block;
-        margin-block: 1em;
-        margin-inline: auto;
-        width: 4em;
-        height: 2em;
-        border: 2px solid var(--text-color);
-        border-radius: 1.8em;
-    }
-
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    .slider {
-        position: absolute;
-        cursor: grab;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--bg-color);
-        transition: .4s;
-    }
-
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 1.8rem;
-        width: 2rem;
-        left: .1rem;
-        bottom: .1rem;
-        background-color: var(--text-color);
-        transition: .4s;
-    }
-
-    input:checked+.slider {
-        background-color: var(--accent-color);
-    }
-
-    input:checked+.slider:before {
-        transform: translateX(1.75rem);
-    }
-
-    .slider.round {
-        border-radius: 1.8em;
-    }
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
-
-    .active {
-        background-color: var(--secondary-color);
     }
 }
 
-@media (prefers-color-scheme: light) {
-    header {
-        width: 15dvw;
-        height: 100dvh;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--accent-color);
+nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-        & h1 {
-            padding-top: 1em;
-            padding-bottom: 1.5em;
-            text-align: center;
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 3em;
+    width: 100%;
+    height: 100%;
+}
 
-            & span {
-                color: var(--green);
-            }
-        }
-    }
+li a {
+    display: block;
+    color: var(--text);
+    padding: 0 24px;
+    text-decoration: none;
+}
 
-    nav {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+li a:hover {
+    background-color: var(--sec);
+    color: var(--bg);
+}
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        line-height: 3em;
-        width: 100%;
-        height: 100%;
-    }
+.bottom-aligned {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
-    li a {
-        display: block;
-        color: var(--bg-color);
-        padding: 0 24px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: var(--primary-color);
-        color: var(--bg-color);
-    }
-
-    .active {
-        background-color: var(--primary-color);
-    }
-
-    .bottom-aligned {
-        margin-top: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-
-    .switch {
-        position: relative;
-        display: inline-block;
-        margin-block: 1em;
-        margin-inline: auto;
-        width: 4em;
-        height: 2em;
-        border: 2px solid var(--bg-color);
-        border-radius: 1.8em;
-    }
-
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    .slider {
-        position: absolute;
-        cursor: grab;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--text-color);
-        transition: .4s;
-    }
-
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 1.8rem;
-        width: 2rem;
-        left: .1rem;
-        bottom: .1rem;
-        background-color: var(--bg-color);
-        transition: .4s;
-    }
-
-    input:checked+.slider {
-        background-color: var(--accent-color);
-    }
-
-    input:checked+.slider:before {
-        transform: translateX(1.75rem);
-    }
-
-    .slider.round {
-        border-radius: 1.8em;
-    }
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
+.active {
+    background-color: var(--sec);
 }
