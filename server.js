@@ -67,6 +67,7 @@ app.post('/sdg', (req, res) => { //post route naar /sdg met response request
     }
 })
 
+// Werkt nog niet
 app.get('/score', function(request, response) {
     const filteredsdgs = sdgData.data.filter(sdg => request.query.sdgIds.includes(sdg.number)) // filter sdgs op basis van query van app.post
     response.render('score', {
