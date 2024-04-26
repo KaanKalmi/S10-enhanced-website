@@ -1,21 +1,23 @@
 <%- include('partials/head', {current:'/score'});%>
-<link rel="stylesheet" href="sdg.css">
-        <h2> Assign a score to each SDG </h2>
-<section class="score-container">
-    <% sdg.forEach(sdg=> { %>
-        <article>
-            <h3> <%= sdg.title %> </h3>
-            <picture> 
-                <source srcset="https://fdnd-agency.directus.app/assets<%= sdg.icon %>?avif" type="image/avif">
-				<source srcset="https://fdnd-agency.directus.app/assets<%= sdg.icon %>?webp" type="image/webp">
-                <img src="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?width=200" class="sdg">
-            </picture>
-            <form method="POST" action="/">
-                <label>
-                    <input type="range" name="score" min="-5" max="5" class="slider" tabindex="0">
-                </label>
-                <% }); %>
-                <input type="submit" value="Submit" class="btn">
-            </form>
-        </article>
-</section>
+    <link rel="stylesheet" href="sdg.css">
+    <h2> Assign a score to each SDG </h2>
+    <section class="score-container">
+        <% sdg.forEach(sdg=> { %>
+            <article>
+                <h3>
+                    <%= sdg.title %>
+                </h3>
+                <picture>
+                    <source srcset="https://fdnd-agency.directus.app/assets<%= sdg.icon %>?avif" type="image/avif">
+                    <source srcset="https://fdnd-agency.directus.app/assets<%= sdg.icon %>?webp" type="image/webp">
+                    <img src="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?width=200" class="sdg">
+                </picture>
+                <form method="POST" action="/">
+                    <label>
+                        <input type="range" name="score" min="-5" max="5" class="slider" tabindex="0">
+                    </label>
+                    <% }); %>
+                        <input type="submit" value="Submit" class="btn">
+                </form>
+            </article>
+    </section>
