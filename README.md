@@ -23,7 +23,6 @@ Hier kan ik nog niks zetten
 - **HTML:** Semantische markup voor inhoudsstructuur en toegankelijkheid.
 - **CSS:** Styling en lay-out om de gebruikersinterface en -ervaring te verbeteren.
 - **JavaScript:** Progressive enhancement en interactiviteit, waardoor kernfunctionaliteit beschikbaar is op alle apparaten.
-- **Responsive Design:** Media queries en vloeibare lay-outs voor optimale weergave op verschillende schermformaten.
 - **Progressive Enhancement:** De website is gebouwd met behulp van progressieve enhancement-principes, wat zorgt voor een robuuste en toegankelijke ervaring op alle apparaten en browsers, ongeacht hun mogelijkheden.
 - **Accessibility:** Gebruik van semantisch HTML om ervoor te zorgen dat de website toegankelijk is voor alle gebruikers.
 - **Performance:** Minificatie, lazy loading en caching-technieken om de prestaties en snelheid van de website te verbeteren.
