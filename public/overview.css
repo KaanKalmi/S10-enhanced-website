@@ -26,6 +26,15 @@
     padding: 32px;
 }
 
+.btn{
+    display: block;
+    border: 1px solid var(--prim);
+    border-radius: 12px;
+    padding: .25em;
+    color: var(--text);
+    text-decoration: none;
+}
+
 .overview{
     grid-area: overview;
     border-radius: 16px;
@@ -48,13 +57,13 @@
     margin: auto;
 }
 .type-selector{
+    margin: .25em;
     border: 2px solid var(--prim);
     border-radius: 12px;
-    margin: .25em;
 }
 
 .wrapper{
-    margin: .25em;
     display: flex;
     flex-direction: column;
+    margin: .25em;
 }
