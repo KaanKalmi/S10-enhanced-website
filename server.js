@@ -23,10 +23,10 @@ app.use(express.urlencoded({ extended: true }))
 // Stel het basis endpoint in
 const apiUrl = 'https://fdnd-agency.directus.app/items'
 
-const sdgData = await fetchJson(apiUrl + '/hf_sdgs')
-const stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders?filter={"company_id":2}')
-const scoresData = await fetchJson(apiUrl + '/hf_scores')
-const companiesData = await fetchJson(apiUrl + '/hf_companies/2')
+const sdgData = await fetchJson(apiUrl + '/hf_sdgs'),
+    stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders?filter={"company_id":2}'),
+    scoresData = await fetchJson(apiUrl + '/hf_scores'),
+    companiesData = await fetchJson(apiUrl + '/hf_companies/2')
 
 console.log(companiesData.data.name)
 
@@ -57,12 +57,12 @@ app.get('/sdg', function (request, response) {
     })
 })
 
-app.post('/sdg', function (req, res) { //post route naar /sdg met response request
+app.post('/sdg', function (request, response) { //post route naar /sdg met response request
     const sdgId = req.body.sdg; // haal sdg uit request body
     if (sdgId) {
-        res.redirect(`/score?sdgIds=${sdgId}`); // redirect naar score net de sdgId
+        response.redirect(`/score?sdgIds=${sdgId}`); // redirect naar score net de sdgId
     } else {
-        res.redirect('/?error=true'); // redirect naar home met error
+        response.redirect('/?error=true'); // redirect naar home met error
     }
 })
 
@@ -70,42 +70,44 @@ app.get('/stakeholder', function (request, response) {
     response.render('stakeholder', {
         stakeholder: stakeholdersData.data,
         score: scoresData.data,
+        company: companiesData.data
     })
 })
 
 app.post("/", async function (request, response) {
     try {
-        const companyId = request.params.id;
-        const staff = request.body.staff;
-        const suppliers = request.body.suppliers;
-        const clients = request.body.clients;
-        const environment = request.body.environment;
-        const name = request.body.message;
+        const companyId = request.body.companiesData, //word niet meegenomen, company_id in stakeholder tabel is leeg?
+            staff = request.body.staff,
+            suppliers = request.body.suppliers,
+            clients = request.body.clients,
+            environment = request.body.environment,
+            name = request.body.message;
         const stakeholder = [];
-        let CheckedRadio;
+        let checkedRadio;
         if (staff) {
-            CheckedRadio = "staff";
+            checkedRadio = "staff";
         } else if (suppliers) {
-            CheckedRadio = "suppliers";
+            checkedRadio = "suppliers";
         } else if (clients) {
-            CheckedRadio = "clients";
+            checkedRadio = "clients";
         } else if (environment) {
-            CheckedRadio = "environment";
+            checkedRadio = "environment";
         }
 
-        stakeholder.push(companyId, CheckedRadio, name);
+        stakeholder.push(companyId, checkedRadio, name);
+        console.log(request.body);
         fetch('https://fdnd-agency.directus.app/items/hf_stakeholders', {
             method: 'POST',
             body: JSON.stringify({
                 company_id: companyId,
-                type: CheckedRadio,
+                type: checkedRadio,
                 name: name
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
             }
-        }).then((postReponse) => {
-            response.redirect('/' + companyId)
+        }).then((postresponse) => {
+            response.redirect('/')
         })
     } catch (error) {
         console.error("Error handling POST request:", error);
