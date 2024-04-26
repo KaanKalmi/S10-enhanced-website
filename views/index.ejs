@@ -1,31 +1,33 @@
 <%- include('partials/head', {current:'/'});%>
-<main class="overview-grid">
-    <link rel="stylesheet" href="overview.css">
-    <h2 class="page-title">Overview</h2>
-<article class="stakeholder Clients">
-Clients come here
-<% stakeholder.forEach(function(item) { %>
-    <h4> <%= item.name %> </h4>
-<% }) %>
-</article>
-<article class="stakeholder Staff">
-Staff come here
-</article>
-<article class="stakeholder Suppliers">
-Suppliers come here
-</article>
-<article class="stakeholder Environment">
-Environment come here
-</article>
-<section class="overview">
-    <h3>Overview</h3>
-    <p>Overview komt hier</p>
+    <main class="overview-grid">
+        <link rel="stylesheet" href="overview.css">
+        <h2 class="page-title">Overview</h2>
+        <article class="stakeholder Clients">
+            <a href="/stakeholder" class="btn"> + Add Stakeholder </a>
+            <% stakeholder.forEach(function(item) { %>
+                <h4>
+                    <%= item.name %>
+                </h4>
+                <% }) %>
+        </article>
+        <article class="stakeholder Staff">
+            <a href="/stakeholder" class="btn"> + Add Stakeholder </a>
+        </article>
+        <article class="stakeholder Suppliers">
+            <a href="/stakeholder" class="btn"> + Add Stakeholder </a>
+        </article>
+        <article class="stakeholder Environment">
+            <a href="/stakeholder" class="btn"> + Add Stakeholder </a>
+        </article>
+        <section class="overview">
+            <h3>Overview</h3>
+            <p>Overview komt hier</p>
+        </section>
+        <article class="update">
+            <h4>Latest Updates</h4>
+        </article>
+    </main>
+    </div>
+    </body>
 
-</section>
-<article class="update">
-   <h4>Latest Updates</h4>
-</article>
-</main>
-</div>
-</body>
-</html>
+    </html>

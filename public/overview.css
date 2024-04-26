@@ -41,3 +41,20 @@
     background-color: var(--sec);
     padding: 32px;
 }
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.type-selector{
+    border: 2px solid var(--prim);
+    border-radius: 12px;
+    margin: .25em;
+}
+
+.wrapper{
+    margin: .25em;
+    display: flex;
+    flex-direction: column;
+}

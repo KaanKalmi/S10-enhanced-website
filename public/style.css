@@ -59,3 +59,12 @@ h2, h3, h4 {
     font-family: "Roboto", sans-serif;
     text-align: center;
 }
+
+.btn{
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--prim);
+    border-radius: 12px;
+    padding: .25em;
+}
