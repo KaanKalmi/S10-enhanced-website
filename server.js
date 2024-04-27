@@ -58,7 +58,7 @@ app.get('/sdg', function (request, response) {
 })
 
 app.post('/sdg', function (request, response) { //post route naar /sdg met response request
-    const sdgId = req.body.sdg; // haal sdg uit request body
+    const sdgId = request.body.sdg; // haal sdg uit request body
     if (sdgId) {
         response.redirect(`/score?sdgIds=${sdgId}`); // redirect naar score net de sdgId
     } else {
@@ -79,10 +79,6 @@ app.post("/", function (request, response) {
     try {
         const { companiesData, staff, suppliers, clients, environment, message } = request.body;
 
-        if (!companiesData || !message) {
-            return response.status(400).send('Missing companiesData or message in request body');
-        }
-
         let checkedRadio;
         if (staff) {
             checkedRadio = "staff";
@@ -97,10 +93,6 @@ app.post("/", function (request, response) {
         if (!checkedRadio) {
             return response.status(400).send('Missing staff, suppliers, clients, or environment in request body');
         }
-
-        console.log(`companyId: ${companiesData}`);
-        console.log(`checkedRadio: ${checkedRadio}`);
-        console.log(`name: ${message}`);
 
         fetch('https://fdnd-agency.directus.app/items/hf_stakeholders?fields=*,*,*,*,*,*', {
             method: 'POST',

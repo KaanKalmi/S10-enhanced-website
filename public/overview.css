@@ -1,10 +1,8 @@
-.flex-container{
-    display: flex;
-}
+.flex-container{ display: flex; }
 .overview-grid{
     grid-gap: 24px;
     display: grid;
-    grid-template-rows: .2fr 1fr 1.5fr;
+    grid-template-rows: .2fr .8fr 1.2fr;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
     margin: 36px;
@@ -28,11 +26,15 @@
 
 .btn{
     display: block;
-    border: 1px solid var(--prim);
+    border: 2px solid var(--prim);
+    background-color:var(--prim);
+    filter: brightness(.8);
     border-radius: 12px;
     padding: .25em;
     color: var(--text);
     text-decoration: none;
+    text-align: center;
+    &:hover{ filter: brightness(1); }
 }
 
 .overview{

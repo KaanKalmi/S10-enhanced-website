@@ -1,56 +1,46 @@
 <%- include('partials/head', {current:'/'});%>
-    <main class="overview-grid">
-        <link rel="stylesheet" href="overview.css">
-        <h2 class="page-title">Overview</h2>
-        <article class="stakeholder Clients">
-            <a href="/stakeholder" class="btn"> + Add Clients </a>
+<main class="overview-grid">
+    <h2 class="page-title">Overview</h2>
+    <article class="stakeholder Clients">
+        <a href="/stakeholder" class="btn"> + Add Clients </a>
+        <% stakeholder.forEach(function(item) { %>
+            <h4> <%= item.name %> </h4>
+        <% }) %>
+    </article>
+    <article class="stakeholder Staff">
+        <a href="/stakeholder" class="btn"> + Add Staff </a>
+        <% stakeholder.forEach(function(item) { %>
+            <h4><%= item.name %></h4>
+        <% }) %>
+    </article>
+    <article class="stakeholder Suppliers">
+        <a href="/stakeholder" class="btn"> + Add Supplier </a>
+        <% stakeholder.forEach(function(item) { %>
+            <h4> <%= item.name %> </h4>
+        <% }) %>
+    </article>
+    <article class="stakeholder Environment">
+        <a href="/stakeholder" class="btn"> + Add Environment </a>
             <% stakeholder.forEach(function(item) { %>
-                <h4>
-                    <%= item.name %>
-                </h4>
-                <% }) %>
-        </article>
-        <article class="stakeholder Staff">
-            <a href="/stakeholder" class="btn"> + Add Staff </a>
-            <% stakeholder.forEach(function(item) { %>
-                <h4>
-                    <%= item.name %>
-                </h4>
-                <% }) %>
-        </article>
-        <article class="stakeholder Suppliers">
-            <a href="/stakeholder" class="btn"> + Add Supplier </a>
-            <% stakeholder.forEach(function(item) { %>
-                <h4>
-                    <%= item.name %>
-                </h4>
-                <% }) %>
-        </article>
-        <article class="stakeholder Environment">
-            <a href="/stakeholder" class="btn"> + Add Environment </a>
-            <% stakeholder.forEach(function(item) { %>
-                <h4>
-                    <%= item.name %>
-                </h4>
-                <% }) %>
-        </article>
-        <section class="overview">
-            <h3>Overview</h3>
-            <p>Overview komt hier</p>
-        </section>
-        <article class="update">
-            <h4>Latest Updates</h4>
-            <p> Iron man - 20.23: scored SDG`s for a</p>
-            <p> Iron man - 19.51: scored SDG`s for lol</p>
-            <p> Iron man - 19.20: scored SDG`s for joi</p>
-            <p> Iron man - 19.03: scored SDG`s for joi</p>
-            <p> Iron man - 18.23: Added a as a stakeholder</p>
-            <p> Iron man - 18.21: Added lol as a stakeholder</p>
-            <p> Iron man - 18.10: Added joi as a stakeholder</p>
-            <p> Iron man - 18.03: Added joi as a stakeholder</p>
-        </article>
-    </main>
-    </div>
-    </body>
-
-    </html>
+        <h4> <%= item.name %> </h4>
+        <% }) %>
+    </article>
+    <section class="overview">
+        <h3>Overview</h3>
+        <p>Overview komt hier</p>
+    </section>
+    <article class="update">
+        <h4>Latest Updates</h4>
+        <p> Iron man - 20.23: scored SDG`s for a</p>
+        <p> Iron man - 19.51: scored SDG`s for lol</p>
+        <p> Iron man - 19.20: scored SDG`s for joi</p>
+        <p> Iron man - 19.03: scored SDG`s for joi</p>
+        <p> Iron man - 18.23: Added a as a stakeholder</p>
+        <p> Iron man - 18.21: Added lol as a stakeholder</p>
+        <p> Iron man - 18.10: Added joi as a stakeholder</p>
+        <p> Iron man - 18.03: Added joi as a stakeholder</p>
+</article>
+</main>
+</div>
+</body>
+</html>

@@ -1,23 +1,24 @@
 <%- include('partials/head', {current:'/sdg'});%>
-	<main>
-		<h2> Select your SDG`s here</h2>
-		<p id="count">0 checkboxes selected</p>
-		<script defer src="script.js"></script>
-		<link rel="stylesheet" href="sdg.css">
-		<section class="sdg-container">
-			<form method="POST" action="score">
-				<% sdgs.forEach(function(sdg) { %>
-					<label>
-						<input type="checkbox" class="checkbox" tabindex="0" name="sdg" value="<%= sdg.number%>">
-						<picture>
-							<source srcset="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?format=avif&eight=450&width=450" type="image/avif">
-							<source srcset="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?format=webp&eight=450&width=450" type="image/webp">
-							<img src="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>" alt="<%= sdg.title %>" class="sdg">
-						</picture>
-					</label>
-					<% }) %>
-						<input type="submit" value="Submit" class="btn">
-			</form>
-		</section>
-	</main>
-	</div>
+<main>
+	<h2> Select your SDG`s here</h2>
+	<p id="count">0 checkboxes selected</p>
+	<script defer src="script.js"></script>
+	<section class="sdg-container">
+		<form method="POST" action="score">
+			<% sdgs.forEach(function(sdg) { %>
+			<label>
+			<input type="checkbox" class="checkbox" tabindex="0" name="sdg" value="<%= sdg.number%>">
+			<picture class="sdg">
+				<source srcset="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?format=avif&eight=450&width=450" type="image/avif">
+				<source srcset="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?format=webp&eight=450&width=450" type="image/webp">
+				<img src="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>" alt="<%= sdg.title %>" class="sdg-img">
+			</picture>
+			</label>
+			<% }) %>
+			<div class="wrapper">
+				<input type="submit" value="Submit" class="submit-btn">
+			</div>
+		</form>
+	</section>
+</main>
+</div>

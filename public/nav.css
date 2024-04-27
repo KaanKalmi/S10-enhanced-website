@@ -55,5 +55,16 @@ li a:hover {
 
 .active {
     background-color: var(--accent);
-    color: black;
+}
+
+.theme-btn{
+    display: inline-block;
+    border-radius: 12px;
+    background-color: var(--prim);
+    padding: 1em;
+    margin: auto;
+    width: 48%;
+    color: var(--bg);
+    text-align: center;
+    text-decoration: none;
 }
