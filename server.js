@@ -74,15 +74,15 @@ app.get('/stakeholder', function (request, response) {
     })
 })
 
-app.post("/", async function (request, response) {
+app.post("/", function (request, response) {
+    console.log(request.body); // Log the request body to debug
     try {
-        const companyId = request.body.companiesData, //word niet meegenomen, company_id in stakeholder tabel is leeg?
-            staff = request.body.staff,
-            suppliers = request.body.suppliers,
-            clients = request.body.clients,
-            environment = request.body.environment,
-            name = request.body.message;
-        const stakeholder = [];
+        const { companiesData, staff, suppliers, clients, environment, message } = request.body;
+
+        if (!companiesData || !message) {
+            return response.status(400).send('Missing companiesData or message in request body');
+        }
+
         let checkedRadio;
         if (staff) {
             checkedRadio = "staff";
@@ -94,14 +94,21 @@ app.post("/", async function (request, response) {
             checkedRadio = "environment";
         }
 
-        stakeholder.push(companyId, checkedRadio, name);
-        console.log(request.body);
-        fetch('https://fdnd-agency.directus.app/items/hf_stakeholders', {
+        if (!checkedRadio) {
+            return response.status(400).send('Missing staff, suppliers, clients, or environment in request body');
+        }
+
+        console.log(`companyId: ${companiesData}`);
+        console.log(`checkedRadio: ${checkedRadio}`);
+        console.log(`name: ${message}`);
+
+        fetch('https://fdnd-agency.directus.app/items/hf_stakeholders?fields=*,*,*,*,*,*', {
             method: 'POST',
             body: JSON.stringify({
-                company_id: companyId,
+                companiesData: companiesData,
+                company_id: companiesData,
                 type: checkedRadio,
-                name: name
+                name: message
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
