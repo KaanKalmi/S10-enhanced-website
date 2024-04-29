@@ -44,7 +44,7 @@ Volg deze stappen om de website lokaal uit te voeren:
 3. Open het bestand `index.ejs` in je favoriete webbrowser.
 
 ## Bronnen
-Nog geen bronnen gebruikt.
+- [WebDev Simplified ExpressJS crash course](https://youtu.be/SccSCuHhOw0?si=Z_LH8WRvgMzCzl44)
 
 ## Licentie
 
