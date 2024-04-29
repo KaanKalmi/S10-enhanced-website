@@ -2,7 +2,7 @@
 import express from 'express'
 import fetchJson from './helpers/fetch-json.js'
 
-// Stel endpoints in voor de verschillende pagina's
+// Stel de variabelen in voor de API URL's en haal de data op
 const apiUrl = 'https://fdnd-agency.directus.app/items',
     sdgData = await fetchJson(apiUrl + '/hf_sdgs'),
     stakeholdersData = await fetchJson(apiUrl + '/hf_stakeholders?filter={"company_id":2}'),
@@ -48,13 +48,6 @@ app.get('/stakeholder', function (request, response) {
 })
 
 // stel de POST routes in
-app.post('/sdg', function (request, response) { 
-    const sdgId = request.body.sdg; 
-    if (sdgId) { response.redirect(`/score?sdgIds=${sdgId}`); }
-    else { response.status(400).send('Missing ID of SDG'); }
-})
-
-
 app.post("/", function (request, response) {
     console.log(request.body); 
     try {
@@ -90,5 +83,10 @@ app.post("/", function (request, response) {
     }
 });
 
+app.post('/sdg', function (request, response) { 
+    const sdgId = request.body.sdg; 
+    if (sdgId) { response.redirect(`/score?sdgIds=${sdgId}`); }
+    else { response.status(400).send('Missing ID of SDG'); }
+})
 //console.log in terminal
 console.log(companiesData.data.name)
