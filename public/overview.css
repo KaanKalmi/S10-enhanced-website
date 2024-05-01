@@ -20,14 +20,13 @@
 
 .stakeholder{
     border-radius: 16px;
-    box-shadow: 0px 0px 12px 0px var(--sec-light);
-    background-color: var(--sec-light) ;
+    box-shadow: 0px 0px 12px 0px var(--sec);
+    background-color: var(--sec) ;
     padding: 32px;
 }
 
 .btn{
     display: block;
-    border: 2px solid var(--prim);
     background-color:var(--prim);
     filter: brightness(.8);
     border-radius: 12px;
@@ -41,17 +40,17 @@
 .overview{
     grid-area: overview;
     border-radius: 16px;
-    background-color: var(--prim-light);
+    background-color: var(--prim);
     padding: 32px;
     color: var(--text);
-    box-shadow: 0px 0px 12px 0px var(--prim-light);
+    box-shadow: 0px 0px 12px 0px var(--prim);
 }
 
 .update{
     grid-area: update;
     border-radius: 16px;
-    box-shadow: 0px 0px 12px 0px var(--sec-light);
-    background-color: var(--sec-light);
+    box-shadow: 0px 0px 12px 0px var(--sec);
+    background-color: var(--sec);
     padding: 32px;
 }
 

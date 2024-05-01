@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: var(--sec);
+    background-color: var(--sec-light);
     width: 12dvw;
     height: 100dvh;
     box-shadow: 4px 0px 12px 0px var(--sec-light);
@@ -39,9 +39,9 @@ li a {
 }
 
 li a:hover {
-    background-color: var(--accent);
+    background-color: var(--accent-light);
     color: var(--text);
-    box-shadow: inset 0px 0px 12px 4px var(--sec-light);
+    box-shadow: inset -15px 3px 16px 6px rgb(24, 10, 59);
 }
 
 .bottom-aligned {
@@ -52,8 +52,8 @@ li a:hover {
 }
 
 .active {
-    background-color: var(--accent);
-    box-shadow: inset 0px 0px 12px 4px var(--sec-light);
+    background-color: var(--accent-light);
+    box-shadow: inset -15px 3px 16px 6px rgb(24, 10, 59);
 }
 
 .dropdown {

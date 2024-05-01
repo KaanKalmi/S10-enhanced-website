@@ -4,49 +4,50 @@
 :root, /* Psuedo class dat de root van het document ( in this case: <html> ) selecteert*/ 
 [data-selected-theme="dark"] { /* Dit is een attribute selector die elk element selecteert met de value 'dark' voor het data-selected-theme*/
     --text:#f5f3f4; 
-    --bg:#0e1111;
-    --prim:#ae9ed5;
-    --prim-light:hsla(257, 57%, 86%, 0.45);
-    --sec:#412684;
-    --sec-light:hsla(257, 55%, 33%, 0.45);
-    --accent:#794ee1;
+    --bg:radial-gradient(at right bottom, hsl(180, 10%, 6%) 78%, rgb(24, 10, 59) 94%, hsl(258, 56%, 20%) 100%);
+    --prim:hsla(257, 57%, 86%, 0.45);
+    --prim-light:hsla(257, 57%, 86%, 0.1);
+    --sec:hsla(257, 55%, 33%, 0.45);;
+    --sec-light:hsla(257, 55%, 33%, 0.08);
+    --accent:hsl(258, 71%, 59%);
+    --accent-light:hsl(258, 71%, 59%, .25);
 }
 
 [data-selected-theme="forest"] { /* Dit is een attribute selector die elk element selecteert met de value 'forest' voor het data-selected-theme*/
     --text:#f5f3f4; 
     --bg:#0e1111;
-    --prim:#9adab7;
-    --prim-light:hsl(147, 46%, 73%, 0.45);
-    --sec:#1c9453;
-    --sec-light:hsl(148, 68%, 35%, 0.45);
-    --accent:#2cf588;
+    --prim:hsl(147, 46%, 73%, 0.45);
+    --prim-light:hsl(147, 46%, 73%, 0.15);
+    --sec:hsl(148, 68%, 35%, 0.45);
+    --sec-light:hsl(148, 68%, 35%, 0.15);
+    --accent:hsl(147, 91%, 57%, .5);
 }
 
 [data-selected-theme="light"] {  /* Dit is een attribute selector die elk element selecteert met de value 'light' voor het data-selected-theme*/
     --text: #0e1111; 
     --bg: #f5f3f4;
-    --prim: #B2AC88;
-    --prim-light: hsl(51, 21%, 62%, 0.45);
-    --sec: #c1c5b1;
-    --sec-light: hsl(72, 15%, 73%, 0.45);
-    --accent: #a0b095;
+    --prim: hsl(51, 21%, 62%, 0.45);
+    --prim-light: hsl(51, 21%, 62%, 0.15);
+    --sec: hsl(72, 15%, 73%, 0.45);
+    --sec-light: hsl(72, 15%, 73%, 0.15);
+    --accent: hsl(96, 15%, 64%, .5);
 }
 
 [data-selected-theme="cherry"] { /* Dit is een attribute selector die elk element selecteert met de value 'cherry' voor het data-selected-theme*/
     --text:#0e1111; 
     --bg:#f5f3f4;
-    --prim:#D2042D;
-    --prim-light:hsl(348, 96%, 42%,0.45);
-    --sec:#fc77f0;
-    --sec-light:hsl(305, 96%, 73%,0.45);
-    --accent:#fc4672;
+    --prim:hsl(348, 96%, 42%,0.45);
+    --prim-light:hsl(348, 96%, 42%,0.15);
+    --sec:hsl(305, 96%, 73%,0.45);
+    --sec-light:hsl(305, 96%, 73%,0.15);
+    --accent:hsl(345, 97%, 63%), .5;
 }
 
 
 body {
     box-sizing: border-box;
     margin: 0;
-    background-color: var(--bg);
+    background: var(--bg);    
     color: var(--text);
     font-style: normal;
     font-weight: 400;
