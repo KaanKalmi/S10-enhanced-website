@@ -3,17 +3,14 @@ header {
     flex-direction: column;
     margin: 0;
     background-color: var(--sec);
-    width: 15dvw;
+    width: 12dvw;
     height: 100dvh;
+    box-shadow: 4px 0px 12px 0px var(--sec-light);
 
     & h1 {
         padding-top: 1em;
         padding-bottom: 1.5em;
         text-align: center;
-
-        & span {
-            color: greenyellow;
-        }
     }
 }
 
@@ -43,7 +40,8 @@ li a {
 
 li a:hover {
     background-color: var(--accent);
-    color: var(--bg);
+    color: var(--text);
+    box-shadow: inset 0px 0px 12px 4px var(--sec-light);
 }
 
 .bottom-aligned {
@@ -55,16 +53,34 @@ li a:hover {
 
 .active {
     background-color: var(--accent);
+    box-shadow: inset 0px 0px 12px 4px var(--sec-light);
 }
 
-.theme-btn{
+.dropdown {
+    position: relative;
+    display: block;
+    & a { color: var(--text); text-decoration: none; padding: 0 24px; }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.theme-btn {
     display: inline-block;
     border-radius: 12px;
-    background-color: var(--prim);
+    background-color: var(--prim-light);
     padding: 1em;
     margin: auto;
-    width: 48%;
-    color: var(--bg);
+    width: 45%;
+    color: var(--text);
     text-align: center;
     text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

@@ -1,36 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 @import url('nav.css');
 
-:root, /* Psuedo class dat de root van het document ( in this case: <html> ) selecteert*/
-[data-selected-theme="dark"] {
-    --text:#e9e8ec; /* Dit is een attribute selector die elk element selecteert met de value 'dark' voor het data-selected-theme*/
-    --bg:#0d0b12;
+:root, /* Psuedo class dat de root van het document ( in this case: <html> ) selecteert*/ 
+[data-selected-theme="dark"] { /* Dit is een attribute selector die elk element selecteert met de value 'dark' voor het data-selected-theme*/
+    --text:#f5f3f4; 
+    --bg:#0e1111;
     --prim:#ae9ed5;
+    --prim-light:hsla(257, 57%, 86%, 0.45);
     --sec:#412684;
+    --sec-light:hsla(257, 55%, 33%, 0.45);
     --accent:#794ee1;
 }
 
-[data-selected-theme="forest"] {
-    --text:#f0f0f0; /* Dit is een attribute selector die elk element selecteert met de value 'forest' voor het data-selected-theme*/
-    --bg:#0c130f;
+[data-selected-theme="forest"] { /* Dit is een attribute selector die elk element selecteert met de value 'forest' voor het data-selected-theme*/
+    --text:#f5f3f4; 
+    --bg:#0e1111;
     --prim:#9adab7;
+    --prim-light:hsl(147, 46%, 73%, 0.45);
     --sec:#1c9453;
+    --sec-light:hsl(148, 68%, 35%, 0.45);
     --accent:#2cf588;
 }
 
-[data-selected-theme="light"] {
-    --text: #0d0a0a; /* Dit is een attribute selector die elk element selecteert met de value 'light' voor het data-selected-theme*/
-    --bg: #FEFEFE;
+[data-selected-theme="light"] {  /* Dit is een attribute selector die elk element selecteert met de value 'light' voor het data-selected-theme*/
+    --text: #0e1111; 
+    --bg: #f5f3f4;
     --prim: #B2AC88;
+    --prim-light: hsl(51, 21%, 62%, 0.45);
     --sec: #c1c5b1;
+    --sec-light: hsl(72, 15%, 73%, 0.45);
     --accent: #a0b095;
 }
 
-[data-selected-theme="cherry"] {
-    --text:#0a151a; /* Dit is een attribute selector die elk element selecteert met de value 'cherry' voor het data-selected-theme*/
-    --bg:#fff7f7;
+[data-selected-theme="cherry"] { /* Dit is een attribute selector die elk element selecteert met de value 'cherry' voor het data-selected-theme*/
+    --text:#0e1111; 
+    --bg:#f5f3f4;
     --prim:#D2042D;
+    --prim-light:hsl(348, 96%, 42%,0.45);
     --sec:#fc77f0;
+    --sec-light:hsl(305, 96%, 73%,0.45);
     --accent:#fc4672;
 }
 

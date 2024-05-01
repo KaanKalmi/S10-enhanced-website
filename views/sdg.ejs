@@ -1,9 +1,11 @@
 <%- include('partials/head', {current:'/sdg'});%>
-<main>
+<main class="sdg-container">
+	<div >
 	<h2> Select your SDG`s here</h2>
 	<p id="count">0 checkboxes selected</p>
+	</div>
 	<script defer src="script.js"></script>
-	<section class="sdg-container">
+	<section>
 		<form method="POST" action="score">
 			<% sdgs.forEach(function(sdg) { %>
 			<label>

@@ -14,27 +14,28 @@
 <body>
     <div class="flex-container">
         <header>
-            <h1><span>Cross</span>marX</h1>
+            <h1>CrossmarX</h1>
             <h2><%= company.name%></h2>
             <nav>
                 <ul>
                     <li><a href="/" <% if ( current=='/' ) { %> class="active" <% }%>> Overview </a> </li>
                     <li><a href="/sdg" <% if ( current=='/sdg' ) { %> class="active" <% }%>> Clients </a> </li>
-                    <li><a href="/stakeholder">Staff</a></li>
-                    <li><a href="/score">Suppliers</a></li>
+                    <li><a href="/stakeholder" <% if ( current=='/stakeholder' ) { %> class="active" <% }%>>Staff</a></li>
+                    <li><a href="/score" <% if ( current=='/score' ) { %> class="active" <% }%>>Suppliers</a></li>
                     <li><a href="#">Environment</a></li>
+                    <div class="dropdown">
+                        <li><a href="#">Themes</a></li>
+                        <script defer src="switch.js"></script>
+                        <div class="dropdown-content theme-switcher">
+                          <button data-theme="dark" aria-pressed="true" class="theme-btn">Dark</button>
+                          <button data-theme="forest" aria-pressed="false" class="theme-btn">Forest</button>
+                          <button data-theme="light" aria-pressed="false" class="theme-btn">Light</button>
+                          <button data-theme="cherry" aria-pressed="false" class="theme-btn">Cherry</button>
+                        </div>
+                      </div>
                     <div class="bottom-aligned">
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Logout</a></li>
-                        <script defer src="switch.js"></script>
-                        <div class="theme-switcher">
-                            <!-- data-theme is een custom data attribute en zorgt ervoor dat je data kan opslaan in een HTML element-->
-                            <!-- aria-pressed is een ARIA (Accessible Rich Internet Applications) attribute dat aangeeft of de button ingedrukt is of niet-->
-                            <button data-theme="dark" aria-pressed="true" class="theme-btn">Dark</button>
-                            <button data-theme="forest" aria-pressed="false" class="theme-btn">Forest</button>
-                            <button data-theme="light" aria-pressed="false" class="theme-btn">Light</button>
-                            <button data-theme="cherry" aria-pressed="false" class="theme-btn">Cherry</button>
-                        </div>
                     </div>
                 </ul>
             </nav>

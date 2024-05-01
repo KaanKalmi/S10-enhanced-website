@@ -1,12 +1,13 @@
 .flex-container{ display: flex; }
 .overview-grid{
-    grid-gap: 24px;
+    grid-gap: 48px;
     display: grid;
-    grid-template-rows: .2fr .8fr 1.2fr;
+    grid-template-rows: 25px 1fr 2fr;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
-    margin: 36px;
-    padding: 16px;
+    margin-inline: 48px;
+    margin-bottom: 48px;
+    padding: 24px;
     width: 85dvw;
 }
 
@@ -18,9 +19,9 @@
 }
 
 .stakeholder{
-    border: 2px solid var(--sec);
     border-radius: 16px;
-    background-color: var(--sec) ;
+    box-shadow: 0px 0px 12px 0px var(--sec-light);
+    background-color: var(--sec-light) ;
     padding: 32px;
 }
 
@@ -40,16 +41,17 @@
 .overview{
     grid-area: overview;
     border-radius: 16px;
-    background-color: var(--prim);
+    background-color: var(--prim-light);
     padding: 32px;
-    color: var(--bg);
+    color: var(--text);
+    box-shadow: 0px 0px 12px 0px var(--prim-light);
 }
 
 .update{
     grid-area: update;
-    border: 2px solid var(--sec);
     border-radius: 16px;
-    background-color: var(--sec);
+    box-shadow: 0px 0px 12px 0px var(--sec-light);
+    background-color: var(--sec-light);
     padding: 32px;
 }
 

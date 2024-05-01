@@ -47,6 +47,8 @@ app.get('/stakeholder', function (request, response) {
     })
 })
 
+// app.get naar score pagina
+
 // stel de POST routes in
 app.post("/", function (request, response) {
     console.log(request.body); 
@@ -88,5 +90,6 @@ app.post('/sdg', function (request, response) {
     if (sdgId) { response.redirect(`/score?sdgIds=${sdgId}`); }
     else { response.status(400).send('Missing ID of SDG'); }
 })
+
 //console.log in terminal
 console.log(companiesData.data.name)

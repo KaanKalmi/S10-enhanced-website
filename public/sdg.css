@@ -1,8 +1,9 @@
 #count { text-align: center; }
 
 .sdg-container {
-    display: flex;
-    width: 85dvw;
+    display: block;
+    margin: auto;
+    max-width: 50vw;
     & form {
         display: flex;
         flex-direction: row;
@@ -40,14 +41,19 @@
 }
 
 input:checked+.sdg, .sdg:hover {
-    border: 5px solid var(--sec);
-    background-color: var(--sec);
+    border: 8px solid var(--prim);
+    background-color: var(--prim);
 }
 
 .submit-btn {
+    display: block;
+    border: 0;
     border-radius: 12px;
-    background-color: var(--sec);
+    background-color: var(--sec-light);
+    padding: .75em;
+    margin: auto;
     color: var(--text);
     text-align: center;
     text-decoration: none;
+    &:hover { background-color: var(--sec); }
 }
