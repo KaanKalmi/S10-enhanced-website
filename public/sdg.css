@@ -3,23 +3,28 @@
 .sdg-container {
     display: block;
     margin: auto;
-    max-width: 50vw;
+    max-width: 55vw;
+    font-size: 2em;
     & form {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
-        margin: auto;
         width: 100%;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        & label{
+            height: 170px;
+            width: 170px;
+        }
     }
 }
 
 .checkbox { opacity: 0; }
 
 .sdg-img {
-    margin: .2em .2em;
-    width: 175px;
-    height: 175px;
+    width: 160px;
+    height: 160px;
 }
 
 input:checked+.sdg, .sdg:hover {
