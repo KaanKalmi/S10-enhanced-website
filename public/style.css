@@ -5,9 +5,9 @@
 [data-selected-theme="dark"] { /* Dit is een attribute selector die elk element selecteert met de value 'dark' voor het data-selected-theme*/
     --text:#f5f3f4; 
     --bg:radial-gradient(at right bottom, hsl(180, 10%, 6%) 70%, rgb(21, 9, 51) 85%, hsl(259, 76%, 15%) 90%);
-    --prim:hsla(257, 57%, 86%, 0.45);
+    --prim:hsla(257, 57%, 86%, 0.25);
     --prim-light:hsla(257, 57%, 86%, 0.1);
-    --sec:hsla(257, 55%, 33%, 0.45);;
+    --sec:hsla(257, 55%, 33%, 0.25);;
     --sec-light:hsla(257, 55%, 33%, 0.08);
     --accent:hsl(258, 71%, 59%);
     --accent-light:hsl(258, 71%, 59%, .25);
@@ -17,13 +17,13 @@
 [data-selected-theme="forest"] { /* Dit is een attribute selector die elk element selecteert met de value 'forest' voor het data-selected-theme*/
     --text:#f5f3f4; 
     --bg:radial-gradient(at right bottom, hsl(180, 10%, 6%) 70%, hsl(147, 71%, 12%) 85%, hsl(148, 63%, 17%) 90%);
-    --prim:hsl(147, 46%, 73%, 0.45);
+    --prim:hsl(147, 46%, 73%, 0.25);
     --prim-light:hsl(147, 46%, 73%, 0.15);
-    --sec:hsl(148, 68%, 35%, 0.45);
-    --sec-light:hsl(148, 68%, 35%, 0.15);
+    --sec:hsl(148, 68%, 35%, 0.25);
+    --sec-light:hsl(148, 68%, 35%, 0.08);
     --accent:hsl(147, 91%, 57%);
     --accent-light:hsl(147, 91%, 57%, .25);
-    --shadow:hsl(147, 71%, 12%, 0.5);
+    --shadow:hsla(146, 69%, 18%, 0.5);
 }
 
 [data-selected-theme="light"] {  /* Dit is een attribute selector die elk element selecteert met de value 'light' voor het data-selected-theme*/
@@ -31,20 +31,20 @@
     --bg: radial-gradient(at right bottom, hsl(102, 28%, 91%) 50%, hsla(51, 21%, 68%, 0.5) 65%, hsla(72, 11%, 54%, 0.5) 80%);
     --prim: hsl(51, 21%, 62%, 0.45);
     --prim-light: hsl(51, 21%, 62%, 0.15);
-    --sec: hsl(72, 15%, 73%, 0.45);
-    --sec-light: hsl(72, 15%, 73%, 0.15);
+    --sec: hsl(72, 15%, 73%, 0.65);
+    --sec-light: hsl(72, 15%, 73%, 0.08);
     --accent: hsl(96, 15%, 64%);
     --accent-light:hsl(96, 15%, 64%, .25);
-    --shadow:hsl(51, 21%, 62%, 0.15);
+    --shadow:hsla(51, 41%, 81%, 0.15);
 }
 
 [data-selected-theme="cherry"] { /* Dit is een attribute selector die elk element selecteert met de value 'cherry' voor het data-selected-theme*/
     --text:#0e1111; 
     --bg:radial-gradient(at right bottom, hsl(346, 100%, 95%) 50%, hsl(345, 100%, 90%) 65%, hsl(348, 100%, 83%) 80%);
-    --prim:hsl(348, 96%, 42%,0.45);
-    --prim-light:hsl(348, 96%, 42%,0.15);
-    --sec:hsl(305, 96%, 73%,0.45);
-    --sec-light:hsl(305, 96%, 73%,0.15);
+    --prim:hsl(348, 96%, 42%,0.25);
+    --prim-light:hsl(348, 96%, 42%, 0.15);
+    --sec:hsl(305, 96%, 73%,0.25);
+    --sec-light:hsl(305, 96%, 73%, 0.08);
     --accent:hsl(345, 97%, 63%);
     --accent-light:hsl(345, 97%, 63%, .25);
     --shadow:hsla(345, 91%, 87%, 0.5);

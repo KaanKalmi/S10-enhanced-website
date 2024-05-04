@@ -2,10 +2,10 @@ header {
     display: flex;
     flex-direction: column;
     margin: 0;
+    box-shadow: 4px 0px 12px 0px var(--sec-light);
     background-color: var(--sec-light);
     width: 12dvw;
     height: 100dvh;
-    box-shadow: 4px 0px 12px 0px var(--sec-light);
 
     & h1 {
         padding-top: 1em;
@@ -39,9 +39,9 @@ li a {
 }
 
 li a:hover {
+    box-shadow: inset -16px -8px 12px 4px var(--shadow);
     background-color: var(--accent-light);
     color: var(--text);
-    box-shadow: inset -15px 3px 16px 6px var(--shadow);
 }
 
 .bottom-aligned {
@@ -52,33 +52,35 @@ li a:hover {
 }
 
 .active {
+    box-shadow: inset -16px -8px 12px 4px var(--shadow);
     background-color: var(--accent-light);
-    box-shadow: inset -15px 3px 16px 6px var(--shadow);
 }
 
 .dropdown {
-    position: relative;
     display: block;
-    & a { color: var(--text); text-decoration: none; padding: 0 24px; }
+    position: relative;
+    & a { padding: 0 24px; color: var(--text); text-decoration: none; }
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    width: 100%;
     z-index: 1;
+    width: 100%;
 }
 
 .theme-btn {
     display: inline-block;
+    margin: auto;
+    border: 0;
     border-radius: 12px;
     background-color: var(--prim-light);
     padding: 1em;
-    margin: auto;
     width: 45%;
     color: var(--text);
     text-align: center;
     text-decoration: none;
+    &:hover { transform: scale(.95); transition: all .3s ease-in; background-color: var(--prim); }
 }
 
 .dropdown:hover .dropdown-content {

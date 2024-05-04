@@ -8,14 +8,14 @@
     & form {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        width: 100%;
         flex-wrap: wrap;
         align-content: center;
+        justify-content: center;
         align-items: center;
+        width: 100%;
         & label{
-            height: 170px;
             width: 170px;
+            height: 170px;
         }
     }
 }
@@ -35,12 +35,12 @@ input:checked+.sdg, .sdg:hover {
 .submit-btn {
     display: block;
     margin-top: 1em;
-    width: 250px;
-    height: 42px;
     border: 0;
     border-radius: 12px;
     background-color: var(--accent);
     padding: .75em;
+    width: 250px;
+    height: 42px;
     color: var(--text);
     font-weight: 700;
     font-size: 18px;
