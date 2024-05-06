@@ -1,33 +1,8 @@
 <%- include('partials/head', {current:'/'});%>
 <main class="overview-grid">
     <h2 class="page-title">Overview</h2>
-    <article class="stakeholder Clients">
-        <a href="/stakeholder" class="btn"> + Add Clients </a>
-        <h3> Clients </h3>
-        <% stakeholder.forEach(function(item) { %>
-            <p> <%= item.name %> </p>
-        <% }) %>
-    </article>
-    <article class="stakeholder Staff">
-        <a href="/stakeholder" class="btn"> + Add Staff </a>
-        <h3> Staff </h3>
-        <% stakeholder.forEach(function(item) { %>
-            <p><%= item.name %></p>
-        <% }) %>
-    </article>
-    <article class="stakeholder Suppliers">
-        <a href="/stakeholder" class="btn"> + Add Supplier </a>
-        <h3> Suppliers </h3>
-        <% stakeholder.forEach(function(item) { %>
-            <p> <%= item.name %> </p>
-        <% }) %>
-    </article>
-    <article class="stakeholder Environment">
-        <a href="/stakeholder" class="btn"> + Add Environment </a>
-        <h3> Environment </h3>
-            <% stakeholder.forEach(function(item) { %>
-        <p> <%= item.name %> </p>
-        <% }) %>
+    <article class="company">
+        <h3><%= company.name %></h3>
     </article>
     <section class="overview">
         <h3>Overview</h3>

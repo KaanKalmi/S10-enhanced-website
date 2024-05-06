@@ -13,16 +13,13 @@
 
 <body>
     <div class="flex-container">
-        <header>
-            <h1>CrossmarX</h1>
-            <h2><%= company.name%></h2>
             <nav>
                 <ul>
                     <li><a href="/" <% if ( current=='/' ) { %> class="active" <% }%>> Overview </a> </li>
                     <li><a href="/sdg" <% if ( current=='/sdg' ) { %> class="active" <% }%>> Clients </a> </li>
                     <li><a href="/stakeholder" <% if ( current=='/stakeholder' ) { %> class="active" <% }%>>Staff</a></li>
                     <li><a href="/score" <% if ( current=='/score' ) { %> class="active" <% }%>>Suppliers</a></li>
-                    <li><a href="#">Environment</a></li>
+                    <li><a href="/environment">Environment</a></li>
                     <div class="dropdown">
                         <li><a href="#">Themes</a></li>
                         <script defer src="switch.js"></script>
@@ -33,10 +30,5 @@
                           <button data-theme="cherry" aria-pressed="false" class="theme-btn">Cherry</button>
                         </div>
                       </div>
-                    <div class="bottom-aligned">
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Logout</a></li>
-                    </div>
                 </ul>
             </nav>
-        </header>

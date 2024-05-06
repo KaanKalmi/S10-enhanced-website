@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: 25px 270px 450px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
+    grid-template-areas: "title title title title" "company company company update" "overview overview overview update";
     margin-bottom: 36px;
     margin-inline: 36px;
     padding: 18px;
@@ -19,7 +19,8 @@
     letter-spacing: .1em;
 }
 
-.stakeholder{
+.company{
+    grid-area: company;
     position: relative;
     box-shadow: 4px 4px 16px 0px var(--sec);
     border-radius: 16px;
@@ -38,7 +39,7 @@
     color: var(--text);
     text-align: center;
     text-decoration: none;
-    &:hover{ transform: scale(1.02); transition: all .3s ease-in; }
+    &:hover{ transform: scale(1.02); transition: all .3s ease-out; }
 }
 
 .overview{
@@ -74,4 +75,35 @@
     display: flex;
     flex-direction: column;
     margin: 1em;
+}
+
+.stakeholder{
+    display: flex;
+    flex-direction: row;
+    width: 85dvw;
+    margin: 1em;
+    padding: 1em;
+    border-top: 1px solid var(--prim-light);
+
+    & .stakeholder-personalia{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        margin-right: .5em;
+        & h3{ margin: .15em; }
+        & p{ margin: .1em; }
+        & .stakeholder-avatar{ border-radius: 12em; width: 125px;  height: 125px; }
+    }
+    & .stakeholder-info{
+        display: flex;
+        flex-direction: column;
+        & .stakeholder-sdg-list{
+            display: flex; 
+            flex-direction: row;
+            & img{
+                margin: .25em;
+            }
+        }
+    }
 }

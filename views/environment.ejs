@@ -1,0 +1,34 @@
+<%- include('partials/head', {current:'/environment'});%>
+<section class="stakeholder-list">
+    <% stakeholder.forEach(function(item) { %>
+    <article class="stakeholder">
+        <div class="stakeholder-personalia">
+            <h3><%= item.name %> </h3>
+            <p><%= item.type %></p>
+            <picture>
+                <source srcset="https://fdnd-agency.directus.app/assets/<%= item.avatar %>?avif" type="image/avif">
+                <source srcset="https://fdnd-agency.directus.app/assets/<%= item.avatar %>?webp" type="image/webp">
+                <img src="https://fdnd-agency.directus.app/assets/<%= item.avatar %>?width=250" class="stakeholder-avatar">
+            </picture>
+        </div>
+            <div class="stakeholder-info">
+                Hier komt wat tekst over de stakeholder 
+                <div class="stakeholder-sdg-list">
+                    <% sdgs.forEach(function(sdg) { %>
+                    <picture>
+                        <source srcset="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?format=avif&eight=450&width=50" type="image/avif">
+                        <source srcset="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>?format=webp&eight=450&width=50" type="image/webp">
+                        <img src="https://fdnd-agency.directus.app/assets/<%= sdg.icon %>" alt="<%= sdg.title %>">
+                    </picture>
+                    <% }); %>
+                </div>
+                
+
+            </div>
+    </article>
+    <% }); %>
+</section>
+</main>
+</div>
+</body>
+</html>

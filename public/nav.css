@@ -1,4 +1,4 @@
-header {
+nav {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -6,18 +6,6 @@ header {
     background-color: var(--sec-light);
     width: 15dvw;
     height: 100dvh;
-
-    & h1 {
-        padding-top: 1em;
-        padding-bottom: 1.5em;
-        text-align: center;
-    }
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 
 ul {
@@ -29,6 +17,8 @@ ul {
     height: 100%;
     line-height: 3em;
     list-style-type: none;
+    justify-content: center;
+    text-align: left;
 }
 
 li a {
@@ -42,13 +32,6 @@ li a:hover {
     box-shadow: inset -16px -8px 12px 4px var(--shadow);
     background-color: var(--accent-light);
     color: var(--text);
-}
-
-.bottom-aligned {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: auto;
 }
 
 .active {
@@ -80,7 +63,7 @@ li a:hover {
     color: var(--text);
     text-align: center;
     text-decoration: none;
-    &:hover { transform: scale(.95); transition: all .3s ease-in; background-color: var(--prim); }
+    &:hover { transform: scale(.95); transition: all .3s ease-out; background-color: var(--prim); }
 }
 
 .dropdown:hover .dropdown-content {

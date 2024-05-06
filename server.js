@@ -121,3 +121,12 @@ app.post("/", function (request, response) {
         response.status(500).send("Error handling POST request");
     }
 });
+
+app.get('/environment', function (request, response) {
+    response.render('environment', {
+        sdgs: sdgData.data,
+        stakeholder: stakeholdersData.data,
+        score: scoresData.data,
+        company: companiesData.data
+    })
+})
