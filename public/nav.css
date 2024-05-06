@@ -4,7 +4,7 @@ header {
     margin: 0;
     box-shadow: 4px 0px 12px 0px var(--sec-light);
     background-color: var(--sec-light);
-    width: 12dvw;
+    width: 15dvw;
     height: 100dvh;
 
     & h1 {

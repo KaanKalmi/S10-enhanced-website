@@ -1,15 +1,15 @@
 .flex-container{ display: flex; }
 .overview-grid{
-    grid-gap: 36px;
+    grid-gap: 32px;
     display: grid;
-    grid-template-rows: 25px 290px 500px;
+    grid-template-rows: 25px 270px 450px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "title title title title" "Clients Staff Suppliers Environment" "overview overview overview update";
-    margin-bottom: 42px;
-    margin-inline: 42px;
+    margin-bottom: 36px;
+    margin-inline: 36px;
     padding: 18px;
-    width: 85dvw;
-    max-height: 100vh;
+    width: 80dvw;
+    max-height: 100dvh;
 }
 
 .page-title{
