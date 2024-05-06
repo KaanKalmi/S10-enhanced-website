@@ -66,6 +66,18 @@ app.post('/sdg', function (request, response) { //post route naar /sdg met respo
     }
 })
 
+app.get('/score', function(request, response) {
+    let sdgIds = request.query.sdgIds;
+    if (!Array.isArray(sdgIds)) {
+        sdgIds = [sdgIds]; // convert to array if it's not an array
+    }
+    const filteredsdgs = sdgData.data.filter(sdg => sdgIds.includes(sdg.number))
+    response.render('score', {
+        sdg: filteredsdgs,
+        stakeholder: stakeholdersData.data,
+        score: scoresData.data,
+    })
+})
 app.get('/stakeholder', function (request, response) {
     response.render('stakeholder', {
         stakeholder: stakeholdersData.data,
