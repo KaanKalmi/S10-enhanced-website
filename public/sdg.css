@@ -3,7 +3,7 @@
 .sdg-container {
     display: block;
     margin: auto;
-    max-width: 55vw;
+    max-width: 60dvw;
     font-size: 2em;
     & form {
         display: flex;
