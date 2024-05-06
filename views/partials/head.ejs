@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="overview.css">
     <link rel="stylesheet" href="sdg.css">
+    <script defer src="cursor.js"></script>
     <title>S10 Enhanced Website</title>
 </head>
 
@@ -19,7 +20,7 @@
                     <li><a href="/sdg" <% if ( current=='/sdg' ) { %> class="active" <% }%>> Clients </a> </li>
                     <li><a href="/stakeholder" <% if ( current=='/stakeholder' ) { %> class="active" <% }%>>Staff</a></li>
                     <li><a href="/score" <% if ( current=='/score' ) { %> class="active" <% }%>>Suppliers</a></li>
-                    <li><a href="/environment">Environment</a></li>
+                    <li><a href="/environment" <% if ( current=='/environment' ) { %> class="active" <% }%>>Environment</a></li>
                     <div class="dropdown">
                         <li><a href="#">Themes</a></li>
                         <script defer src="switch.js"></script>
