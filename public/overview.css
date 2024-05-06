@@ -20,8 +20,8 @@
 }
 
 .company{
-    grid-area: company;
     position: relative;
+    grid-area: company;
     box-shadow: 4px 4px 16px 0px var(--sec);
     border-radius: 16px;
     background-color: var(--sec) ;
@@ -29,13 +29,13 @@
 }
 
 .btn{
-    width: fit-content;
     position: absolute;
     right: 1em;
     box-shadow: 2px 2px 4px 0px var(--accent-light);
     border-radius: 12px;
     background-color:var(--accent-light);
     padding: .35em;
+    width: fit-content;
     color: var(--text);
     text-align: center;
     text-decoration: none;
@@ -57,7 +57,7 @@
     border-radius: 16px;
     background-color: var(--sec);
     padding: 32px;
-    & .update-item{ display: block; line-height: 24px; padding: .25em; border-top: 1px solid var(--accent-light);}
+    & .update-item{ display: block; border-top: 1px solid var(--accent-light); padding: .25em; line-height: 24px;}
 }
 
 .flex{
@@ -80,30 +80,31 @@
 .stakeholder{
     display: flex;
     flex-direction: row;
-    width: 85dvw;
     margin: 1em;
-    padding: 1em;
     border-top: 1px solid var(--prim-light);
+    padding: 1em;
+    width: 85dvw;
 
     & .stakeholder-personalia{ 
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 20%;
         margin-right: .5em;
+        width: 20%;
         & h3{ margin: .15em; }
         & p{ margin: .1em; }
-        & .stakeholder-avatar{ border-radius: 12em; width: 125px;  height: 125px; }
+        & .stakeholder-avatar{ box-shadow:  4px 4px 16px 4px var(--prim); border-radius: 12em; width: 125px;  height: 125px;}
     }
     & .stakeholder-info{
         display: flex;
         flex-direction: column;
+        margin:.25em;
         & .stakeholder-sdg-list{
             display: flex; 
             flex-direction: row;
-            & img{
-                margin: .25em;
-            }
+            margin-top:.25em;
+            padding: .25em;
+            & img{ margin: .25em; }
         }
     }
 }
